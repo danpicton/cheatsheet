@@ -1,6 +1,7 @@
 import sys
 from PyQt4 import QtGui, QtCore
-
+from PyQt4.QtGui import *
+from PyQt4.QtCore import *
 
 class mymainwindow(QtGui.QMainWindow):
     def __init__(self):
@@ -17,8 +18,15 @@ class mymainwindow(QtGui.QMainWindow):
         )
         self.setWindowOpacity(0.9)
         self.setStyleSheet('QMainWindow{background-color: darkgray; border: 5px solid darkgray}')
-        self.label = QtGui.QLabel(self)
-        self.label.setText('cats')
+        wid = QtGui.QWidget(self)
+        grid = QtGui.QGridLayout()
+        self.setCentralWidget(wid)
+        for i in range(1,3):
+            for j in range(1,3):
+                grid.addWidget(QLabel('cats'))
+        wid.setLayout(grid)
+        #self.label = QtGui.QLabel(self)
+        #self.label.setText('cats')
 
     def mousePressEvent(self, event):
         QtGui.qApp.quit()
