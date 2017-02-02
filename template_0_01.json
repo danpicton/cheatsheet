@@ -1,0 +1,12 @@
+{"title" : "cheat sheet title",
+  "meta" :  {"author" : "author name",
+             "templateVersion": 0.01,
+             "date" : "DD/MM/YYYY"}
+  "column" : [{"header" : "optional column heading",
+              "section" : [{"title" : "optional section title",
+                            "entries":[{"displayType":"key/cmd/menuopts/icon",
+                                        "displayVal":"lctrl-lshift-W/source file/file -> open/path.gif",
+                                        "displayText":"text corresponding to value"}]
+                          }]
+              }]
+}
