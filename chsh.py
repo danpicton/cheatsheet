@@ -6,6 +6,13 @@ from PyQt4.QtCore import *
 class mymainwindow(QtGui.QMainWindow):
     def __init__(self):
         QtGui.QMainWindow.__init__(self)
+        wid = QtGui.QWidget(self)
+        grid = QtGui.QGridLayout()
+        self.setCentralWidget(wid)
+        for i in range(1,5):
+            for j in range(1,5):
+                grid.addWidget(QtGui.QLabel("test"+str(i)+","+str(j)))
+        wid.setLayout(grid)
         self.setWindowFlags(
             QtCore.Qt.WindowStaysOnTopHint |
             QtCore.Qt.FramelessWindowHint |
@@ -18,13 +25,6 @@ class mymainwindow(QtGui.QMainWindow):
         )
         self.setWindowOpacity(0.9)
         self.setStyleSheet('QMainWindow{background-color: darkgray; border: 5px solid darkgray}')
-        wid = QtGui.QWidget(self)
-        grid = QtGui.QGridLayout()
-        self.setCentralWidget(wid)
-        for i in range(1,3):
-            for j in range(1,3):
-                grid.addWidget(QLabel('cats'))
-        wid.setLayout(grid)
         #self.label = QtGui.QLabel(self)
         #self.label.setText('cats')
 
