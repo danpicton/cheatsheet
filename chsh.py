@@ -6,23 +6,18 @@ from PyQt4.QtWebKit import QWebView
 #from PyQt4.QtGui import QApplication
 #from PyQt4.QtCore import QUrl
 
-image = QUrl.fromLocalFile("/home/dan/Projects/cheatsheet/splash_loading.jpg")
-#print image
 html = '''
 <html>
 <head>
 <title>A Sample Page</title>
 </head>
-<body>
+<body style="background-image:url({url})">
 <h1>Hello, World!</h1>
 <hr />
-<img src="{url}" />
 I have nothing to say.
 </body>
 </html>
 '''.format(url="file:///home/dan/Projects/cheatsheet/splash_loading.jpeg")
-print html
-
 
 class myWebView(QtWebKit.QWebView):
     def __init__(self):
