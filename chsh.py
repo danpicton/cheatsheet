@@ -6,23 +6,28 @@ from PyQt4.QtWebKit import QWebView
 #from PyQt4.QtGui import QApplication
 #from PyQt4.QtCore import QUrl
 
+image = QUrl.fromLocalFile("/home/dan/Projects/cheatsheet/splash_loading.jpg")
+#print image
 html = '''
 <html>
 <head>
 <title>A Sample Page</title>
 </head>
-<body style="background-image:url({url})">
+<body>
 <h1>Hello, World!</h1>
 <hr />
+<img src="{url}" />
 I have nothing to say.
 </body>
 </html>
-'''.format(url=QUrl("qrc:///home/dan/Projects/cheatsheet/splash_loading.jpg"))
+'''.format(url="file:///home/dan/Projects/cheatsheet/splash_loading.jpeg")
+print html
+
 
 class myWebView(QtWebKit.QWebView):
     def __init__(self):
         QtWebKit.QWebView.__init__(self)
-        #self.load(QUrl("https://www.google.co.uk/"))
+        #self.load(image)
         self.setHtml(html)
         self.setWindowOpacity(0.9)
         radius = 10.0
