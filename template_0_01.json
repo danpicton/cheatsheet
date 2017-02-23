@@ -1,14 +1,17 @@
-{"title" : "cheat sheet title",
-  "meta" :  {"author" : "author name",
+{"title" : {"text": "cheat sheet title",
+            "display": "yes/no"},
+  "meta" :  {"sheetVersion": 0.1,
+             "author" : "author name",
              "email"  : "email address",
-             "website" : ["website"]
+             "website" : ["website"],
              "templateVersion": 0.01,
              "date" : "DD/MM/YYYY"},
-  "column" : [{"header" : "optional column heading",
-              "section" : [{"title" : "optional section title",
+  "column" : [{"header" : "column heading",
+              "section" : [{"title" : "section title",
                             "entries":[{"displayType":"key/cmd/menuopts/icon",
                                         "displayVal":"lctrl-lshift-W/source file/file -> open/path.gif",
                                         "displayText":"text corresponding to value"}]
                           }]
-              }]
+              }],
+  "bgImage": "graphicalSheet.jpg"              
 }
