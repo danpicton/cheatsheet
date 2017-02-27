@@ -12,7 +12,7 @@ __maintainer__ = "Dan Picton"
 __status__ = "Prototype"
 
 # move to template handler
-def get_template_json(json_template_file)
+def get_template_json(json_template_file):
     with open (json_template_file) as data_file:
         return json.load(data_file)
 
